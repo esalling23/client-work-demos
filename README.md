@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Client Work Demos
 
-## Getting Started
+This repository contains a set of games built with React.js, Redux, Context API, Lottie.js, and GSAP for an educational client company. 
 
-First, run the development server:
+> All assets & code not written by myself have been moved out of this repo to protect artist & client IP. 
+> Some features and content including game levels, player progression, and student feedback including voice-over have been removed or significantly reduced to protect client IP. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Role and Responsibilities
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+As the **Engineering Lead** on these projects, I worked directly with the design and content teams to establish and refine gameplay mechanics. In addition to writing the majority of the code for the games, I managed feature and bug ticket prioritization and resolution while overseeing a team of engineers from conception to product delivery.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+High Level Contributions:
+- Led rapid prototyping, feature implementation and game mechanic refinement, and testing phases for each game. 
+- Wrote and maintained internal documentation for development, deployment, and delivery processes for the client for use for future contracts. 
+- Oversaw and onboarded new team members, including helping them resolve bugs, communicate effectively with the client, and follow client procedures. 
+- Defined and documented internal development code style and standardization across games and started a new internal code review process to improve the quality of client deliveries and continue to secure new game contracts. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Nitty Gritty: 
+- Implemented a combination of Redux & Context API to manage game state, split into 4 reducers. 
+- Collaborated with art team to improve animation performance and establish patterns that supported easy variation through JSON data parsing & live asset replacement. 
+- Utilized GSAP/GreensockJS for on-the-fly animations and LottieJS for pre-built animations
+- Protected asset access using AWS S3 and a bucket policy to grant access to set referrers
+- Built unique interactive game environments including drag-and-drop functionality, parallax scrolling backgrounds, screen-responsive 
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

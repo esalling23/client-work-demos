@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "standardLevels": [
+    {
+      "level": { "type": "level", "id": 1 },
+      "items": [
+				{
+          "questionId": 1,
+          "numbers": [576, 258],
+          "operator": "+",
+          "representation": "BASE_TEN_BLOCKS"
+        },
+				{
+          "questionId": 2,
+          "numbers": [455, 327],
+          "operator": "+",
+          "representation": "ABSTRACT_REP_NUMBER"
+        }
+      ]
+    },
+    {
+      "level": { "type": "level", "id": 2 },
+      "items": [
+        {
+          "questionId": 1,
+          "numbers": [3, 75],
+          "operator": "+",
+          "representation": "BASE_TEN_BLOCKS"
+        },
+				{
+					"questionId": 2,
+					"numbers": [47, 35],
+					"operator": "+",
+					"representation": "ABSTRACT_REP_NUMBER"
+				}
+      ]
+    }
+  ]
+}
