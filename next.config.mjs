@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	basePath: '/client-work-demos',
+	basePath: process.env.NODE_ENV === "production" ? '/client-work-demos' : null,
 	output: "export",  // <=== enables static exports
 	webpack(config) {
     // Grab the existing rule that handles SVG imports
