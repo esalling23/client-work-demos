@@ -76,9 +76,15 @@ GameStateCtxProvider.propTypes = {
 
 export const useGameStateCtx = () => useContext(GameStateCtx);
 
-export const withGameContext = (WrappedComponent) => () =>
-  (
+export const withGameContext = (WrappedComponent) => {
+  const ComponentWithGameContext = (props) => (
     <GameStateCtxProvider>
-      <WrappedComponent />
+      <WrappedComponent {...props} />
     </GameStateCtxProvider>
   );
+
+  // Set the display name for easier debugging
+  ComponentWithGameContext.displayName = `withGameContext(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
+
+  return ComponentWithGameContext;
+};

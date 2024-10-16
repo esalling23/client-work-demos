@@ -4,7 +4,6 @@ import NumberPad from './NumberPad';
 import { GameStateCtxProvider } from '../../context';
 import { MAX_INPUT_LENGTH } from '../../lib/constants';
 
-// eslint-disable-next-line jest/no-disabled-tests
 describe.skip('<NumberPad/>', () => {
   it('renders', () => {
     render(

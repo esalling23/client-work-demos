@@ -20,7 +20,7 @@ const StyledProgressDiv = styled.div`
   }
 `;
 
-const StyledProgressBar = React.memo(({ amount, onAnimationComplete }) => {
+const StyledProgressBar = ({ amount, onAnimationComplete }) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -36,11 +36,11 @@ const StyledProgressBar = React.memo(({ amount, onAnimationComplete }) => {
       <div ref={ref} />
     </StyledProgressDiv>
   );
-});
+};
 
 StyledProgressBar.propTypes = {
   amount: PropTypes.number.isRequired,
   onAnimationComplete: PropTypes.func.isRequired,
 };
 
-export default StyledProgressBar;
+export default React.memo(StyledProgressBar);
