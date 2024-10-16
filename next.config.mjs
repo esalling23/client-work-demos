@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	basePath: '/client-work-demos',
 	output: "export",  // <=== enables static exports
 	webpack(config) {
     // Grab the existing rule that handles SVG imports
