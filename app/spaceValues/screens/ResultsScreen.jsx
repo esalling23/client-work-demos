@@ -5,7 +5,7 @@ import {
   getCorrectResponsesCount,
   getLevelItemsCount,
 } from '../context/selectors';
-import GameBg from '@/public/spaceValues/images/environments/background.svg'
+import svgMap from '../lib/assets/svgMap';
 
 const ResultsScreen = ({ onDone }) => {
   const { gameState } = useGameStateCtx();
@@ -17,7 +17,11 @@ const ResultsScreen = ({ onDone }) => {
     <div 
 			className="w-full h-full font-bold bg-black text-white relative"
 		>
-			<GameBg className="w-full h-full absolute t-0 l-0 z-0" />
+			<img 
+        src={svgMap.gameBg} 
+        className="w-full h-full absolute t-0 l-0 z-0" 
+        alt="game background for results screen"
+      />
 			<div className="z-10 flex flex-col gap-12 h-full w-full items-center justify-center relative">
 				<h2 className="text-3xl">{correct} / {total}</h2>
 				<button

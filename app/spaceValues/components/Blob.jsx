@@ -19,6 +19,7 @@ import {
   radiansToDegrees,
 } from '../lib/common';
 import { sfxMap } from '../lib/assets/audioMap';
+import svgMap from '../lib/assets/svgMap';
 
 import blobMove from '@/public/spaceValues/images/animations/Blob_Move.json'
 import blobTogether from '@/public/spaceValues/images/animations/Blob_Together.json'

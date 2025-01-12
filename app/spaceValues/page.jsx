@@ -23,6 +23,7 @@ import curriculumJson from '@/public/spaceValues/curriculum/spaceValues.curricul
 import './styles.css'
 import GameContainer from '../common/GameContainer';
 
+
 const StyledScreen = styled(StyledFullScreen)`
   --font-family: 'Open Sans', serif;
 
@@ -75,7 +76,6 @@ const App = () => {
 
   const screenComponent = useMemo(() => {
     switch (screen) {
-			default:
       case SCREENS.RESULTS:
         return <ResultsScreen onDone={goToStart} />;
 
@@ -89,7 +89,7 @@ const App = () => {
 				return <p>Loading...</p>
 
 			case SCREENS.PROGRESS:
-			// default:
+			default:
 					return (
 						<ProgressScreen
 							onLevelClick={playGame}

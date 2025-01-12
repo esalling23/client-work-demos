@@ -60,8 +60,7 @@ import InteractableBucket from './Interactable';
 import Blob from './Blob';
 import { findBucketElement, generateBucketId } from '../lib/buckets';
 import { sfxMap } from '../lib/assets/audioMap';
-import targetSvg from '@/public/spaceValues/images/ui/target_xl.svg?url'
-import checkmarkSvg from '@/public/spaceValues/images/ui/symbol_check.svg?url'
+import svgMap from '../lib/assets/svgMap';
 
 const StyledBucketContainer = styled(FlexCol)`
   position: relative;
@@ -668,7 +667,7 @@ const NumberBucket = ({
         isDropReset={shouldResetDraggable}
       >
         <StyledTargetSvg
-          src={targetSvg}
+          src={svgMap.target}
           $isHidden={!isMarkedCorrect && !isActive}
         />
         <Blob
@@ -702,7 +701,7 @@ const NumberBucket = ({
         $isFilled={false}
       >
         {isPlaceCorrect && (
-          <StyledCheckmark src={checkmarkSvg} />
+          <StyledCheckmark src={svgMap.checkmark} />
         )}
       </StyledFloatingContainer>
     </StyledBucketContainer>

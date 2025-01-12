@@ -154,11 +154,11 @@ export const StyledImageButton = styled.button`
 export const StyledPressButton = styled(StyledImageButton)`
   ${({ $src, $isSelected }) => css`
 		color: black;
-    background-image: url(${($isSelected ? $src.pressed.src : $src.base.src) || ''});
+    background-image: url(${($isSelected ? $src.pressed : $src.base) || ''});
 		padding-bottom: 4px;
 
     &:active {
-      background-image: url(${$src.pressed.src});
+      background-image: url(${$src.pressed});
       padding-top: 2px;
       padding-bottom: 0;
     }

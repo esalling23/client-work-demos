@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { commonSfx, sfxMap } from '../../lib/assets/audioMap'
-import useAudioPlayer from '../../../../hooks/useAudioPlayer';
+import useAudioPlayer from '@/hooks/useAudioPlayer';
 import NumberButton from './NumberButton';
 import {
   addResponse,
@@ -19,11 +19,7 @@ import {
   getIsFeedback
 } from '../../context/selectors';
 import { GAME_COLORS } from '../../lib/constants';
-
-import clearBtn from '../../../../public/spaceValues/images/ui/button_clear_up.svg?url'
-import clearBtnPressed from '../../../../public/spaceValues/images/ui/button_clear_down.svg?url'
-import doneBtn from '../../../../public/spaceValues/images/ui/button_done_up.svg?url'
-import doneBtnPressed from '../../../../public/spaceValues/images/ui/button_done_down.svg?url'
+import svgMap from '../../lib/assets/svgMap';
 
 const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3];
 
@@ -136,8 +132,8 @@ const NumberPad = ({
           onClick={internalClear}
           type="button"
           $src={{
-						base: clearBtn,
-						pressed: clearBtnPressed
+						base: svgMap.clearBtn,
+						pressed: svgMap.clearBtnPressed
           }}
         >
           Clear
@@ -150,8 +146,8 @@ const NumberPad = ({
         onClick={internalSubmit}
         type="button"
         $src={{
-					base: doneBtn,
-          pressed: doneBtnPressed,
+					base: svgMap.doneBtn,
+          pressed: svgMap.doneBtnPressed,
         }}
       >
         Done

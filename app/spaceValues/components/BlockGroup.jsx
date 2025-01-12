@@ -24,8 +24,7 @@ import {
   getAnswerModelingState,
   getCurrentQuestion,
 } from '../context/selectors';
-
-import hundredsBlockStack from '@/public/spaceValues/images/ui/block_hundred_stack.svg?url'
+import svgMap from '../lib/assets/svgMap';
 
 // Wrapper
 const StyledBlockGroup = styled(FlexRow)`
@@ -148,7 +147,7 @@ const BlockGroup = ({ number, forcePlace }) => {
       };
       const checkNeedsAsset = () => {
         if (place === PLACE_VALUE.HUNDREDS && i !== 0) {
-					return hundredsBlockStack.src
+					return svgMap.hundredsBlockStack
         }
         return '';
       };

@@ -71,12 +71,7 @@ import BucketController from './BucketController';
 import FloatingNumber from './FloatingNumber';
 
 import { sfxMap } from '../lib/assets/audioMap';
-
-import tryAgainBtn from '@/public/spaceValues/images/ui/button_tryagain_up.svg?url'
-import tryAgainBtnPressed from '@/public/spaceValues/images/ui/button_tryagain_down.svg?url'
-import nextBtn from '@/public/spaceValues/images/ui/button_next_up.svg?url'
-import nextBtnPressed from '@/public/spaceValues/images/ui/button_next_down.svg?url'
-import gameBg from '@/public/spaceValues/images/environments/background.svg?url'
+import svgMap from '../lib/assets/svgMap';
 
 const StyledArea = styled(FlexRow)`
   margin: 0 20px;
@@ -200,13 +195,13 @@ const StandardItemComponent = ({ onDone }) => {
   const continueButtonSrc = useMemo(() => {
 		if (isCorrect) {
 			return {
-				base: nextBtn,
-				pressed: nextBtnPressed
+				base: svgMap.nextBtn,
+				pressed: svgMap.nextBtnPressed
 			}
 		}
     return {
-			base: tryAgainBtn,
-			pressed: tryAgainBtnPressed
+			base: svgMap.tryAgainBtn,
+			pressed: svgMap.tryAgainBtnPressed
     };
   }, [isCorrect]);
 
@@ -400,7 +395,7 @@ const StandardItemComponent = ({ onDone }) => {
   );
 
   return (
-    <StyledStandardItem isCentered ref={gameContents} $src={gameBg.src}>
+    <StyledStandardItem isCentered ref={gameContents} $src={svgMap.gameBg}>
 			{/* <GameBg className="absolute w-full h-full t-0 l-0 z-0"  /> */}
 			<div className="my-20 d-contents">
 				<StyledInstruction>{instructionText}</StyledInstruction>

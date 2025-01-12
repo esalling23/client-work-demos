@@ -37,10 +37,7 @@ import {
 import {
   setFeedbackState,
 } from '../context/actions';
-
-import pointerSvg from '@/public/spaceValues/images/ui/pointer.svg'
-import aliveIndicatorSvg from '@/public/spaceValues/images/ui/box_life.svg'
-import inputBoxSvg from '@/public/spaceValues/images/ui/leftpanel_inputbox.svg?url';
+import svgMap from '../lib/assets/svgMap';
 
 const StyledAlgorithm = styled(FlexCol)`
   position: relative;
@@ -265,7 +262,7 @@ const Algorithm = ({ isExpanded, isSubmitDisabled, isHidden, places }) => {
         $isExpanded={isExpanded}
         $isDisabled={isSubmitDisabled}
         key="user-response-input-display"
-				$src={inputBoxSvg.src}
+				$src={svgMap.inputBox}
       >
         {userResponse ? solutionRowDisplay : ''}
       </StyledResponseInput>
@@ -317,7 +314,7 @@ const Algorithm = ({ isExpanded, isSubmitDisabled, isHidden, places }) => {
 
   const payoffImage = (
     <StyledPayoffImage
-			as={aliveIndicatorSvg}
+			src={svgMap.aliveIndicator}
       $isHidden={!isExpanded || !isPayoff}
     />
   );
@@ -335,7 +332,7 @@ const Algorithm = ({ isExpanded, isSubmitDisabled, isHidden, places }) => {
           {algorithmTotalDisplay}
           <StyledIndicator
             className={INDICATOR_CLASS}
-						as={pointerSvg}
+						src={svgMap.pointer}
           />
         </>
       )}

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { StyledPressButton } from '../StyledComponents';
 import { GAME_COLORS } from '../../lib/constants';
-import numBtn from '@/public/spaceValues/images/ui/button_number_up.svg?url'
-import numBtnPressed from '@/public/spaceValues/images/ui/button_number_down.svg?url'
+import svgMap from '../../lib/assets/svgMap';
 
 const StyledNumberButton = styled(StyledPressButton)`
   width: 52px;
@@ -17,8 +16,8 @@ const StyledNumberButton = styled(StyledPressButton)`
 
 const NumberButton = ({ value, isDisabled, onClick }) => {
   const buttonSrc = {
-		base: numBtn,
-		pressed: numBtnPressed
+		base: svgMap.numBtn,
+		pressed: svgMap.numBtnPressed
   };
   return (
     <StyledNumberButton
